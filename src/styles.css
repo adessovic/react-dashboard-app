@@ -117,3 +117,17 @@ h2{
 .users__card p {
     margin-bottom: 10px;
 }
+.new-user__form{
+    margin-top:40px;
+}
+.new-user__form-group{
+    margin-top: 10px;
+    padding: 10px;
+}
+.new-user__form-group input{
+    margin-left: 20px;
+    padding: 10px 10px;
+}
+.new-user__form-group button{
+    padding: 10px 10px;
+}

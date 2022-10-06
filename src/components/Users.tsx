@@ -4,40 +4,37 @@ export type UserType = {
     id: number,
     name: string,
     email: string,
-    phone: string,
-    website: string,
-    adress: {}
+    phone: string
 }
 type UsersType = Array<UserType>;
 
-
-const Users = () => {
+function Users(props: any) {
 
     const [users, setUsers] = useState<UsersType>([]);
 
-    useEffect(()=>{
+    useEffect(() => {
+        console.log('props from router', props);
         fetch('https://jsonplaceholder.typicode.com/users')
-        .then(response => response.json())
-        .then(json => setUsers(json));
+            .then((response) => response.json())
+            .then((json) => setUsers(json));
     }, []);
 
-    return(
+    return (
         <div className="users">
-            <h1>All users</h1><br/>
+            <h1>All users</h1><br />
+            <Link to="/users/new">Add a New User</Link>
 
             <div className="users__list">
-                {
-                    users && users.map((user)=>(
-                        <div className="users__card" key={user.id}>
-                            <Link to={`/users/${user.id}`}>
-                                <p>Name: <span className="normal">{user.name}</span> </p>
-                            </Link>
-                        </div>
-                    ))
-                }
+                {users && users.map((user) => (
+                    <div className="users__card" key={user.id}>
+                        <Link to={`/users/${user.id}`}>
+                            <p>Name: <span className="normal">{user.name}</span> </p>
+                        </Link>
+                    </div>
+                ))}
             </div>
 
         </div>
-    )
+    );
 }
 export default Users;
