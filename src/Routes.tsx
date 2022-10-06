@@ -6,6 +6,10 @@ import Setting from "./components/Settings";
 import Tabs from "./components/Tabs";
 import Login from "./components/Login";
 
+import Users from "./components/Users";
+import SingleUser from "./components/SingleUser";
+import NewUser from "./components/NewUser";
+
 import Tab1 from "./components/Tab1";
 import Tab2 from "./components/Tab2";
 import Tab3 from "./components/Tab3";
@@ -28,6 +32,9 @@ const MainRoutes = () => (
                     <Route path="tab3" element={<Tab3 />}/>
                 </Route>
                 <Route path="/settings" element={<Setting/>} />
+                <Route path="users" element={<Users/>} />
+                <Route path="users/:userId" element={<SingleUser/>} />
+                <Route path="users/new" element={<NewUser/>} />
             </Route>
             
         </Route>

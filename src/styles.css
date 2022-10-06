@@ -109,3 +109,11 @@ h2{
     color: #365262 !important;
     text-decoration: underline !important;
 }
+.users__card{
+    margin-top: 40px;
+    border: solid #365262;
+    padding: 20px;
+}
+.users__card p {
+    margin-bottom: 10px;
+}
