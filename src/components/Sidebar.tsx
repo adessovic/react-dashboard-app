@@ -38,7 +38,10 @@ const Sidebar = () => {
         }
         {
           !user && 
-          <Link to="/login" className={location.pathname === '/login' ? 'sidebar_active' : ''}>Login</Link>
+          <>
+            <Link to="/login" className={location.pathname === '/login' ? 'sidebar_active' : ''}>Login</Link>
+            <Link to="/signup" className={location.pathname === '/signup' ? 'sidebar_active' : ''}>Signup</Link>
+          </>
         }
       </div>
     </div>;

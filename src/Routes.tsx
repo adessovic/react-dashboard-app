@@ -5,6 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Setting from "./components/Settings";
 import Tabs from "./components/Tabs";
 import Login from "./components/Login";
+import Signup from "./components/Signup";
 
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser";
@@ -42,6 +43,10 @@ const MainRoutes = () => (
         {/** Public Routes */}
         <Route path="/login" element={<PublicRoutes/>}>
             <Route path="/login" element={<Login/>}/>
+        </Route>
+        
+        <Route path="/signup" element={<PublicRoutes/>}>
+            <Route path="/signup" element={<Signup/>}/>
         </Route>
     </Routes>
 )
