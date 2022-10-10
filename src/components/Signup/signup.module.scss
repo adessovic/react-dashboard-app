@@ -1,5 +1,5 @@
 .title{
-    color: green;
+    color: purple;
 }
 /* Full-width inputs */
 input[type=text], input[type=email], input[type=password] {
@@ -9,13 +9,4 @@ input[type=text], input[type=email], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-.login{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-.login button{
-    width: 100%;
-    padding: 20px;
 }
