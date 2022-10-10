@@ -7,7 +7,7 @@ const Login = () => {
 
     const secret = 'test123';
     const [email, setEmail] = useState<string>('test@email.com');
-    const [password, setPassword] = useState<string>('');
+    const [password, setPassword] = useState<string>( secret || '');
 
     /* Login User */
     async function loginUserAsync() {
@@ -35,13 +35,17 @@ const Login = () => {
 
         // Validate User Password
         if(isSecretOk){
-            localStorage.setItem('user', data);
-
+            localStorage.setItem('user', JSON.stringify(data));
+            
             // Redirect to 'Dashboard' Page
             navigate('/dashboard');
         }
         else{ // Wrong Password
+            console.log('password',password);
+            console.log('secret',secret);
+            
             alert('Try Again');
+            return;
         }
     }
 
@@ -71,10 +75,8 @@ const Login = () => {
 
     return(
         <div className="login">
-            <h2>Login page</h2>
+            <h2 className="title">Login page</h2>
             
-            <p> Please login to continue</p>
-
             <div>
                 <label htmlFor="username"><b>Username</b></label>
                 <input type="email" placeholder="Enter Email" name="username" defaultValue={email} onChange={emailChange} />

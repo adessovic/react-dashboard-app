@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./Signup.css";
+//import classNames from "./Signup/Signup.modules.css";
 
-type NewUser = {
-    email : string,
-    password : string
-};
-
-const Login = () => {
+const Signup = () => {
 
     const navigate = useNavigate();
 
@@ -31,7 +28,7 @@ const Login = () => {
         }
         else{ 
             // Redirect to 'Login' Page
-            alert('Sigup OK!'); 
+            alert('Signup OK!');
             navigate('/login');
         }
     }
@@ -50,9 +47,7 @@ const Login = () => {
 
     return(
         <div className="login">
-            <h2>Signup</h2>
-            
-            <p>Fill in all fields</p>
+            <h2 className="title">Signup</h2> 
 
             <div>
                 <label htmlFor="username"><b>Email</b></label>
@@ -64,8 +59,7 @@ const Login = () => {
 
             <button onClick={signupUser}>Signup</button>
             
-            
         </div>
     )
 }
-export default Login;
+export default Signup;

@@ -5,7 +5,7 @@ import Dashboard from "./components/Dashboard";
 import Setting from "./components/Settings";
 import Tabs from "./components/Tabs";
 import Login from "./components/Login";
-import Signup from "./components/Signup";
+import Signup from "./components/Signup/Signup";
 
 import Users from "./components/Users";
 import SingleUser from "./components/SingleUser";
